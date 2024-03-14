@@ -7,7 +7,7 @@ const generateAppConfigs = () => {
     const projectName = file.split('.').slice(0, -2).join('.');
     return {
       name: `text-embedding-inference-${projectName}`,
-      script: 'docker-compose',
+      script: 'sudo docker compose',
       args: `-p ${projectName} --env-file ${file} up`,
       watch: false,
       interpreter: 'none', // Important for running shell commands

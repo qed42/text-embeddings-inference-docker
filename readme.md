@@ -1,0 +1,1 @@
+# huggingface/text-embeddings-inference

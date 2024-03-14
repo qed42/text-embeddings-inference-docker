@@ -4,9 +4,9 @@ services:
   text-embeddings-inference:
     container_name: text-embeddings-inference
     image: ghcr.io/huggingface/text-embeddings-inference:cpu-0.6
-    command: --model-id WhereIsAI/UAE-Large-V1 --pooling cls
+    command: --model-id ${MODEL_ID}  --pooling ${POOLING}
     ports:
-      - "50061:80"
+      - "${PUBLIC_PORT}:80"
     volumes:
       - ./data:/data
     pull_policy: always
